@@ -1,0 +1,34 @@
+extends c
+extends cpp
+
+snippet ifdef "$ifdef" b
+#ifdef ${1/([A-Za-z0-9_]+).*/$1/}
+${VISUAL}${0}
+#endif ${1/.+/ \/* /m}$1${1/.+/ *\/ /m}
+endsnippet
+
+
+snippet switch
+switch (${1:/* variable */}) 
+{
+	case ${2:/* variable case */}:
+	{
+		${3}
+	}
+	${4:break;}${5}
+
+	default:
+	{
+		${6}
+	}
+	break;
+}
+endsnippet
+
+snippet if "if snippet with VISUAL" b
+if (${1:comp})
+{
+	${VISUAL}
+}
+${0}
+endsnippet

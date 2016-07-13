@@ -1,0 +1,19 @@
+#Rocket specific snippets
+
+snippet cfd "function declaration with coments"
+// @brief $2
+// @param $3
+// ${4:description}
+${1:void} ${2:function_name}(${3});
+endsnippet
+
+# commented member function implementation
+snippet cmf "Member function declaration with comments"
+	// @brief $2
+	// @param $3
+	// ${5:Description}
+	//
+	${4:void} ${1:`vim_snippets#Filename('$1', 'ClassName')`}::${2:memberFunction}(${3}) {
+		${0}
+	}
+endsnippet
