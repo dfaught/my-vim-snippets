@@ -1,0 +1,51 @@
+priority -50
+
+snippet tef "TEST_F test fixture"
+TEST_F(${1:object}, ${2:test})
+{
+    ${0}
+}
+
+endsnippet
+
+snippet te "TEST unit test macro"
+TEST(${1:object}, ${2:test})
+{
+    ${0}
+}
+endsnippet
+
+snippet ast "ASSERT_THAT test"
+ASSERT_THAT( ${1:value}, ${2:compare} );
+endsnippet
+
+snippet est "EXPECT_THAT test"
+EXPECT_THAT( ${1:value}, ${2:compare} );
+endsnippet
+
+snippet gmo "MOCK template"
+MOCK_METHOD( ${1:return}${2:func}, ${3:signature}, (${4:modifiers}) );
+${0}
+endsnippet
+
+snippet exc "EXPECT_CALL test"
+EXPECT_CALL( ${1:obj}, ${2:call} )${3:expectations};
+${0}
+endsnippet
+
+snippet fm "FFF fake value mock"
+FAKE_VALUE_FUNC(${1:ret}, ${2:func}, ${3:params});
+$0
+endsnippet
+
+snippet fvm "FFF fake void mock"
+FAKE_VOID_FUNC(${1:func}, ${2:params});
+$0
+endsnippet
+
+snippet dfm "FFF fake value mock"
+${1:DECLARE}_FAKE_VALUE_FUNC(${2:ret}, ${3:func}, ${4:params});
+$0
+endsnippet
+
+# vim:ft=snippets:

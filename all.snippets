@@ -11,13 +11,15 @@ endglobal
 snippet sw "Mail signature work" b
 ${0}
 --
-Derek Faught
-M: 469.408.3727
-E: derek.faught@rocketgaming.com
 
-Upcoming vacations:
-7/7 - 7/14
-8/22 - 8/25
+Derek Faught | Associate Principal Software Engineer, Flight Operations
+Calspan                                                                                                              
+2041 Niagara Falls Blvd
+Niagara Falls, NY 14304                                                                                                    
+716.513.6891 (mobile)
+469.408.3727 (mobile)
+derek.faught@calspan.com
+www.calspan.com
 
 endsnippet
 
@@ -25,16 +27,19 @@ snippet me "Short sig (sme)" b
 ${0}
 Derek
 
-Upcoming vacations:
-7/7 - 7/14
-8/22 - 8/25
-
 endsnippet
 
-snippet jira "JIRA-XXXX (jira)" w
-${1:PROJ}-${2:NUM} $0
+snippet jira "FLIGHTSW-XXXX (jira)" w
+${1:VISTA}-${2:NUM} ${3:SUMMARY}
+
+$0
 endsnippet
 
 snippet df "Initial tag for email" b
 [<DF>] ${VISUAL}${0}
+endsnippet
+
+snippet #lic "General # comment license tag" b
+# (c) 2020 Calspan Corporation.  All rights reserved.
+$0
 endsnippet

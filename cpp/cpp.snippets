@@ -1,0 +1,49 @@
+priority -50
+
+snippet dfile "Doxygen file header"
+/*!
+* \file `!p snip.rv = snip.basename`
+*
+* \brief ${1:brief}
+*
+*
+*/
+$0
+endsnippet
+
+snippet po "#pragma once"
+#pragma once
+${0}
+endsnippet
+
+snippet cal "CAL_LOG"
+CAL_LOG( ${1:flags}, "%s:%d ${2:msg}", basename(__FILE__), __LINE__${3} );
+${0}
+endsnippet
+
+snippet calt "CAL_LOG"
+CAL_LOG( ${1:flags}, "%s:%d:[0x%X] ${2:msg}", basename(__FILE__), __LINE__, std::this_thread::get_id()${3:,} );
+${0}
+endsnippet
+
+snippet clr "CAL_LOG_R"
+CAL_LOG_R( ${1:flags}, "${2:msg}"${3:,} );
+${0}
+endsnippet
+
+snippet clrt "CAL_LOG_R - thread"
+CAL_LOG_R( ${1:flags}, "[0x%X] - ${2:msg}", std::this_thread::get_id()${3:,} );
+${0}
+endsnippet
+
+snippet ecl "Basic c++ doxygen enum class template" b
+/*!
+* \brief: ${4:brief}
+*
+*/
+enum class ${1:name}
+{
+    ${0:item}
+}
+endsnippet
+# vim:ft=snippets:

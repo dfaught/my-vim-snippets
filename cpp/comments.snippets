@@ -1,16 +1,5 @@
 # Comment snippets
 
-
-snippet rfh
-////////////////////////////////////////////////////////////////////////////////
-///
-///		Copyright ©		`date +%Y` Rocket Gaming Systems
-///
-////////////////////////////////////////////////////////////////////////////////
-
-${0}
-endsnippet
-
 snippet todo "C/C++ TODO comment"
 	// TODO ${1:Stuff to do}
 endsnippet
@@ -19,7 +8,25 @@ snippet fix "C/C++ FIXME comment"
 	// FIXME ${1:Borked}
 endsnippet
 
+snippet que "C/C++ QUESTION comment"
+    // QUESTION ${1:?}
+endsnippet
+
 snippet funh "Function header comment" b
 // @brief ${1: Brief Description}
 //
+endsnippet
+
+snippet lic "license"
+/* Copyright © 2020 Calspan Corporation.  All rights reserved. */
+
+$0
+endsnippet
+
+snippet dib "Doxygen inline comment - brief"
+/*!< /brief ${1:brief} */
+endsnippet
+
+snippet dir "Doxygen inline comment - ref"
+/*!< /ref ${1:ref} */
 endsnippet

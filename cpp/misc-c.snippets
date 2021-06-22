@@ -1,6 +1,15 @@
 extends c
 extends cpp
 
+global !p
+def complete(t, opts):
+	if t:
+		opts = [ m[len(t):] for m in opts if m.startswith(t) ]
+	if len(opts) == 1:
+		return opts[0]
+	return "(" + "|".join(opts) + ')'
+endglobal
+
 snippet ifdef "$ifdef" b
 #ifdef ${1/([A-Za-z0-9_]+).*/$1/}
 ${VISUAL}${0}
@@ -31,4 +40,9 @@ if (${1:comp})
 	${VISUAL}
 }
 ${0}
+endsnippet
+
+snippet log "Generic log statement" b
+LOG($1`!p snip.rv=complete(t[1], ['L_DEBUG', 'L_INFO', 'L_WARN', 'L_ERROR', 'L_FATAL'])`, ${2:PREFIX}, "<%s:%d> ${3}", __FILE__, __LINE__, ${4});
+$0
 endsnippet
