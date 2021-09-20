@@ -24,13 +24,23 @@ EXPECT_THAT( ${1:value}, ${2:compare} );
 endsnippet
 
 snippet gmo "MOCK template"
-MOCK_METHOD( ${1:return}${2:func}, ${3:signature}, (${4:modifiers}) );
+MOCK_METHOD( ${1:return}, ${2:func}, ${3:signature}, (${4:modifiers}) );
 ${0}
 endsnippet
 
 snippet exc "EXPECT_CALL test"
 EXPECT_CALL( ${1:obj}, ${2:call} )${3:expectations};
 ${0}
+endsnippet
+
+snippet bf "BENCHMARK_F benchmark fixture"
+BENCHMARK_F( ${1:obj}, ${2:fixture} )( benchmark::State& st )
+{
+	for( auto _ : st )
+	{
+		${3:test}
+	}
+}
 endsnippet
 
 snippet fm "FFF fake value mock"

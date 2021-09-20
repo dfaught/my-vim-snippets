@@ -1,15 +1,20 @@
 # Comment snippets
 
 snippet todo "C/C++ TODO comment"
-	// TODO ${1:Stuff to do}
+// TODO ${1:Stuff to do}
 endsnippet
 
 snippet fix "C/C++ FIXME comment"
-	// FIXME ${1:Borked}
+// FIXME ${1:Borked}
+#pragma GCC warning "$1" 
 endsnippet
 
 snippet que "C/C++ QUESTION comment"
-    // QUESTION ${1:?}
+// QUESTION ${1:?}
+endsnippet
+
+snippet note "C/C++ comment to add a note"
+//NOTE ${1:knowledge}
 endsnippet
 
 snippet funh "Function header comment" b
@@ -18,7 +23,7 @@ snippet funh "Function header comment" b
 endsnippet
 
 snippet lic "license"
-/* Copyright © 2020 Calspan Corporation.  All rights reserved. */
+/* Copyright © 2021 Calspan Corporation.  All rights reserved. */
 
 $0
 endsnippet
