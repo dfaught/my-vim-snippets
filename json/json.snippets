@@ -12,13 +12,13 @@ snippet cj "JSON jira for script" b
 	"project": "${1:VISTA}",
 	"summary": "${2:summary}",
 	"description": "${3:description}",
-	"issuetype": "${4:Story}",
-	"components": [{"name": "${5:Software}}"],
-	"fixVersions": [{"name": "${6:Release}}"],
-	"customfield_10008": "${7:epic}",
+	"issuetype": "CSE $4`!p snip.rv=complete(t[4], ['Story', 'Task', 'Bug'])`",
+	"components": [{"name": "${5:Software}"}],
+	"fixVersions": [{"name": "${6:Release Planning}"}],
+	"customfield_10008": "$1-${7}",
 	"customfield_10600": {"value": "$8`!p snip.rv=complete(t[8], ['Billable', 'IR&D'])`"},
 	"customfield_10800": {"value": "$9`!p snip.rv=complete(t[9], ['CC-JFLT-00010', 'CC-JOH-00011'])`"},
-	"customfield_10801": {"value": "${10:027-03-203 Curr CSE - CCS Software}"},
+	"customfield_10801": {"value": "$10`!p snip.rv=complete(t[10], ['027-03-205 TO4 CSE - SW Release & Revs', '027-03-304 Curr - CSE - SCD', '027-03-203 Curr CSE - CCS Software', '005-01 VISTA IR&D', '027-99 TO3 - Carry Over'])`"},
 	"customfield_10023": 0
 }${0:,}
 endsnippet
